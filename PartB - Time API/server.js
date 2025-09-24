@@ -15,7 +15,7 @@ http.createServer((req, res) => {
 
     // Sending the response section
     res.writeHead(200, {"Content-Type" : "text/html"});
-    res.end(`${StringUtils.format(ENG.GREETING, query["name"])} ${getDate()}`);
+    res.end(`<span style="color:blue;">${StringUtils.format(ENG.GREETING, query["name"])} ${getDate()}</span>`);
 }).listen(PORT);
 
 // Server message
