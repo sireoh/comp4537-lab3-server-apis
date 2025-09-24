@@ -1,4 +1,4 @@
-const math = require("./modules/math.js");
+const math = require("./modules/math");
 
 console. log(`Hello VINCENT. The sum is ${math. add(219, 1024)}`) ;
 
