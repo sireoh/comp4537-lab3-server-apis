@@ -33,9 +33,15 @@ class RouteHandlers {
     }
   }
 
-  // static readFile(res, query) {
-  //   console.log("reading file ...");
-  // }
+  static readFile(res) {
+    const result = Utils.readFile();
+    console.log(result);
+    if (result.success) {
+      res.end(`<span style="color:blue;">${result.message}</span>`);
+    } else {
+      res.end(`<span style="color:red;">${result.message}</span>`);
+    }
+  }
 }
 
 module.exports = RouteHandlers;

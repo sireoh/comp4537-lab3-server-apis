@@ -17,6 +17,7 @@ class ENG {
   static GET_DATE_ERROR_MESSAGE =
     "Error: name query parameter is missing. Add using /COMP4537/lab/3/getDate?name=[your_name]";
   static FILE_EXISTS = "File already exists.";
+  static READ_FILE_ERROR = "Error: Unable to read file. File may not exist.";
 }
 
 module.exports = ENG;
