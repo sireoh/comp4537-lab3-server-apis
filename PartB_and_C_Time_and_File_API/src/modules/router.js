@@ -17,6 +17,11 @@ class Router {
     if (!Utils.dataDirExists()) {
       // If doesn't exist, make new /data directory
       Utils.mkDataDir();
+
+      // If the content file doesn't exist, create it
+      if (!Utils.contentFileExists()) {
+        Utils.mkContentFile();
+      }
     }
 
     switch (pathname) {

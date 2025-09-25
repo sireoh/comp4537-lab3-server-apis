@@ -53,6 +53,14 @@ class Utils {
     fs.mkdirSync(Utils.DATA_DIR_PATH, { recursive: true });
   }
 
+  static contentFileExists() {
+    return fs.existsSync(Utils.FILE_PATH);
+  }
+
+  static mkContentFile() {
+    fs.writeFileSync(Utils.FILE_PATH, "", "utf8");
+  }
+
   static String = {
     format(template, ...args) {
       let i = 0;
