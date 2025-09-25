@@ -1,5 +1,5 @@
-const ENG = require('../lang/en/eng');
-const RouteHandlers = require('./routehandler');
+const ENG = require("../lang/en/eng");
+const RouteHandlers = require("./routehandler");
 
 class Router {
   static BASE_ROUTE = "/COMP4537/lab/3";
@@ -13,6 +13,10 @@ class Router {
 
   static run(res, pathname, query) {
     switch (pathname) {
+      case Router.BASE_ROUTE:
+      case Router.BASE_ROUTE + "/":
+        RouteHandlers.baseRoute(res);
+        break;
       case Router.GET_DATE_ROUTE:
         RouteHandlers.getDate(res, query);
         break;
