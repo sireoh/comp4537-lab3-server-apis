@@ -2,14 +2,14 @@ const ENG = require("../lang/en/eng");
 const RouteHandlers = require("./routehandler");
 
 class Router {
-  static BASE_ROUTE = "/COMP4537/lab/3";
+  static BASE_ROUTE = "/COMP4537/labs/3";
 
   // Part B - Get the Date
   static GET_DATE_ROUTE = `${Router.BASE_ROUTE}/getDate`;
 
   // Part C - File Operations
   static WRITE_FILE_ROUTE = `${Router.BASE_ROUTE}/writeFile`;
-  static READ_FILE_ROUTE = `${Router.BASE_ROUTE}/readFile`;
+  static READ_FILE_ROUTE = `${Router.BASE_ROUTE}/readFile/file.txt`;
 
   static run(res, pathname, query) {
     switch (pathname) {

@@ -11,7 +11,7 @@ class ENG {
         <li>[GET] /COMP4537/lab/3/readFile?filename=[file_name]</li>
       </ul>`;
   static WRITE_SUCCESS_MESSAGE =
-    "Successfully written content %s to /data/content.txt";
+    "Successfully written content '%s' to /data/file.txt";
   static WRITE_FAIL_MESSAGE =
     "Error: text query parameter is missing. Add using /COMP4537/lab/3/writeFile?text=[content]";
   static GET_DATE_ERROR_MESSAGE =

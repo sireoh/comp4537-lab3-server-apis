@@ -5,7 +5,7 @@ const ENG = require("../lang/en/eng");
 
 class Utils {
   static DATA_DIR_PATH = "./data";
-  static FILE_NAME = "content.txt";
+  static FILE_NAME = "file.txt";
   static FILE_PATH = path.join(Utils.DATA_DIR_PATH, Utils.FILE_NAME);
 
   static getDate() {
@@ -18,8 +18,8 @@ class Utils {
       // If doesn't exist, make new /data directory
       Utils.mkDataDir();
     } else {
-      // Write to the file
-      fs.writeFile(Utils.FILE_PATH, content, (err) => {
+      // Append to the file
+      fs.appendFile(Utils.FILE_PATH, content + "\r\n", (err) => {
         if (err) {
           console.error(ENG.WRITE_FAIL_MESSAGE, err);
         } else {
@@ -37,7 +37,9 @@ class Utils {
     } else {
       // Read file successfully
       return {
-        message: fs.readFileSync(Utils.FILE_PATH, "utf8"),
+        message: fs
+          .readFileSync(Utils.FILE_PATH, "utf8")
+          .replace(/\r?\n/g, "<br>"),
         success: true,
       };
     }
